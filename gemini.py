@@ -56,12 +56,12 @@ def generate_response(query):
         return f"Error generating response: {e}"
 
 #Streamlit app
-st.title("Simple Chatbot with GenAI")
-st.write("Hi, Welcome to the RAIT Chatbot!")
+st.title("Gemini LLM Integration")
+st.write("This is a gemini-1.5-flash model.")
 
-query = st.text_input("Enter your query: ")
-if st.button("Generate Answer"):
+query = st.text_input("Enter your query here: ")
+if st.button("Get Response"):
     with st.spinner("Processing your query..."):
             insights = generate_response(query)
-            st.write("*Insights:*")
+            st.write("Response From LLM")
             st.write(insights)
